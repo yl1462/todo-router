@@ -14,7 +14,7 @@ describe('Todo API:', function () {
   before('make knex instance', () => {  
     db = knex({
       client: 'pg',
-      connection: process.env.TEST_DB_URL,
+      connection: 'postgresql://yliang1462@localhost/todos',
     })
     app.set('db', db)
   });
